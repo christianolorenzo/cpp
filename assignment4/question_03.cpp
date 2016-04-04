@@ -13,8 +13,7 @@ int main()
 {
     double prices[5] = {9.92, 6.32, 12.63, 5.95, 10.29};
     double units[5];
-    double amounts[5];
-    
+    double amounts[5];    
     int counter;
 
     for(counter = 0; counter < 5; counter++){
