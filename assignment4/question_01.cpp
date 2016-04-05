@@ -5,7 +5,10 @@
  */
 
 #include <iostream>
+#include <conio.h>
+
 using namespace std;
+
 int main()
 {
     // variable declaration
@@ -31,7 +34,7 @@ int main()
     // display the result
     cout << "The sum of the digits of " << n << " is " << sum << endl;
 
-    cin.get();
+    getch();
 
     return 0;
 }

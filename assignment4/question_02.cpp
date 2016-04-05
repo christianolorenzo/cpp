@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <conio.h>
 
 using namespace std;
 
@@ -28,7 +29,7 @@ int main()
     // display the result
     cout << "The sum of all numbers less than " << num << " is " << sum << endl;
 	
-	cin.get();
+	getch();
 	
     return 0;
     
