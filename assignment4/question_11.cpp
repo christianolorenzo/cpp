@@ -1,7 +1,7 @@
 /* Name   : Lorenzo Christopher
  * ID#    : 20151747
  * Purpose: Program to calculate parking fare for customers.
- * Date   : 29.03.2016
+ * Date   : 12.04.2016
  */
 
 
@@ -18,10 +18,11 @@ int main()
     int hour_out;
     int minute_out;
     int timespent;
-    int totalchage;
-    int hours;
-    int minutes;
+    int totalcharge;
+    int totalHours;
+    int totalMinutes;
     
+   
     // Menu
     cout << "Welcome\n";
     cout << "Please enter the following details\n";
@@ -57,38 +58,39 @@ int main()
     }
     
     // calculate minute
-    minutes = minute_out - minute_in;
+    totalMinutes = minute_out - minute_in;
     // calculate hour
-    hours = hour_out - hour_in;
+    totalHours = hour_out - hour_in;
     
-    if(minutes > 0){
-    	hours++;
-    }   
+    if(totalMinutes > 30)
+        totalHours = totalHours+1;
+
+    timespent = totalHours;
     
     //Begginging of comparison
     switch(type){
         case 'C':
         case 'c':
             if(timespent <= 3){
-            	totalchage = 0 * timespent;
+            	totalcharge = 0 * timespent;
             }else{
-            	totalchage = (0 * 3) + 150 * (timespent - 3);
+            	totalcharge = (0 * 3) + 150 * (timespent - 3);
             }
         break;    
         case 'B':
         case 'b':
             if(timespent == 1){
-            	totalchage = 200;
+            	totalcharge = 200;
             }else{
-            	totalchage = (200 * 1) + 370 * (timespent - 1);
+            	totalcharge = (200 * 1) + 370 * (timespent - 1);
             }   
         break;
         case 'T':
         case 't':
             if(timespent <= 2){
-            	totalchage = 100 * timespent;            	
+            	totalcharge = 100 * timespent;            	
             }else{
-            	totalchage = (100 * 2) + 230 * (timespent -2);
+            	totalcharge = (100 * 2) + 230 * (timespent -2);
             }
         break;
         default :
@@ -99,7 +101,7 @@ int main()
     cout << "Type of Vehicle is: " << type << "\n";
     cout << "Time-in" << hour_in <<":" << minute_in << "\n";
     cout << "Time-out" << hour_out <<":" << minute_out << "\n";
-    cout << "Parking Time";
+    cout << "Parking Time" << totalcharge;
     cout << "Rounded Total";
     cout << "Total charges";
     
@@ -108,25 +110,4 @@ int main()
       
     return 0;
 }      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
