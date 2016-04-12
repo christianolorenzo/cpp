@@ -1,0 +1,101 @@
+
+START
+	DECLARE hour_in, minute_in, hour_out, minute_out, timespent, fare, totalhour
+			totalminute, h_in, m_in, h_out, m_out, rouded, parkhour as real
+			
+			type as char
+			
+	WRITE "Enter the type of vehicle"
+	READ type
+	WRITE "Enter entering and leaving hours and minutes"
+	READ h_in, m_in, h_out, m_out
+	
+	LET hour_in <---- h_in
+	LET minute_in <---- m_in
+	LET hour_out <---- h_out
+	LET minute_out <---- m_out
+	
+	IF hour_out > 24 THEN
+		WRITE "Your vehicle will be towed"
+	ENDIF
+	
+	IF minute_out < minute_in THEN
+		LET minute_out <---- minute_out + 60
+		LET hour_out <---- hour_out -1
+	ENDIF
+	
+	LET totalhour <---- hour_out - hour_in
+	LET totalminute <---- minute_out - minute_in
+	LET parkhour <---- totalhour
+	
+	IF totalminute > 30 THEN
+		LET totalhour <---- totalhour + 1
+	ENDIF
+	
+	LET rounded <---- totalhour
+	LET timespent <---- totalhour
+	
+	IF type <---- "c" THEN
+		IF timespent > 3 THEN
+			LET fare <---- (timespent - 3) * 150
+		ELSE
+			LET fare <---- 0
+		ENDIF
+	ELSE IF type <---- "b" THEN
+		IF timespent > 1 THEN
+			LET fare <---- (timespent - 1) * 370 + (200 * 1)
+		ELSE
+			LET fare <---- timespent * 200
+		ENDIF
+	ELSE IF type <---- "t" THEN
+		IF timespent > 2 THEN
+			LET fare <---- (timespent - 2) * 230 + (100 *2)
+		ELSE
+			LET fare <---- timespent * 100
+		ENDIF
+	ELSE
+		WRITE "Invalid Vehicle type"
+	ENDIF
+	
+	WRITE "PARKING LOT CHARGES"
+	WRITE "Type of Vehicle" type
+	WRITE "TIME-IN", h_in, m_in
+	WRITE "TIME-OUT", h_out, m_out;
+	WRITE "PARKING TIME", parkhour, totalminute
+	WRITE "ROUNDED TOTAL," rounded
+	WRITE "TOTAL CHARGE", fare
+	
+STOP
+
+
+	
+	
+	
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			

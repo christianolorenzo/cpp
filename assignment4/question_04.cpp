@@ -1,12 +1,12 @@
 /* Name   : Lorenzo Christopher
  * ID#    : 20151747
  * Purpose: 
- * Date   : 05.04.2016
+ * Date   : 12.04.2016
  */
 
 #include <iostream>
 #include <string>
-//#include <conio.h>
+#include <conio.h>
 
 using namespace std;
 
@@ -65,7 +65,7 @@ int main()
 	
 	}
 	
-	//getch();  
+	getch();  
 	  
     return 0;
 	

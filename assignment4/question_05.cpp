@@ -2,7 +2,7 @@
  * ID#    : 20151747
  * Purpose: Program to compute and display the average of the test results of
  *			four experiments
- * Date   : 05.04.2016
+ * Date   : 12.04.2016
  */
 
 #include <iostream>

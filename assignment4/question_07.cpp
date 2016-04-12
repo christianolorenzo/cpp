@@ -2,7 +2,7 @@
  * ID#    : 20151747
  * Purpose: Program to locate and display both the maximum and minimum values in
  *			an array
- * Date   : 05.04.2016
+ * Date   : 12.04.2016
  */
 
 

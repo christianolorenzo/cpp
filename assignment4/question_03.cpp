@@ -2,7 +2,7 @@
  * ID#    : 20151747
  * Purpose: program to store price, units and amounts in array and display in 
  *			tabular format.
- * Date   : 05.04.2016
+ * Date   : 12.04.2016
  */
 
 #include <iostream>

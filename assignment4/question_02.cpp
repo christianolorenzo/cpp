@@ -2,7 +2,7 @@
  * ID#    : 20151747
  * Purpose: Program to find the sum of all numbers less than a user inputted
  *          number
- * Date   : 05.04.2016
+ * Date   : 12.04.2016
  */
 
 #include <iostream>

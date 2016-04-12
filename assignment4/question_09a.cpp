@@ -1,7 +1,7 @@
 /* Name   : Lorenzo Christopher
  * ID#    : 20151747
  * Purpose: Program to encrypt a four digit integer
- * Date   : 05.04.2016
+ * Date   : 12.04.2016
  */
 
 #include <iostream>

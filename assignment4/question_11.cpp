@@ -3,10 +3,9 @@
  * Purpose: Program to calculate parking fare for customers.
  * Date   : 12.04.2016
  */
-
-
 #include <iostream>
-//#include <conio.h>
+#include <conio.h>
+
 using namespace std;
 
 int main()
@@ -122,7 +121,7 @@ int main()
     cout << "\n\t\t\t--------";
     cout << "\nTOTAL CHARGES\t\t" <<"$" << fare << "\n\n";    
     
-    // getch();  
+    getch();  
       
     return 0;
 }      
